@@ -1,5 +1,5 @@
 import { MyDropzoneBasic  } from "../FileUpload";
-import UserInput from "./UserInput";
+import UserInput from "./UserInput.tsx";
 import React, { Dispatch, SetStateAction } from 'react';
 
 interface SideNavProps {

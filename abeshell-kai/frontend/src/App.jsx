@@ -4,11 +4,11 @@
 
 import './App.css';
 import React, { Component, useState } from 'react';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { CssBaseline } from '@mui/material';
 import GridBackgroundWithText from './Functions/GridBackgroundWithText.tsx';
-import SideNav from './Functions/LeftNavigationMenu';
-import TableContents from './Functions/TableContents';
+import SideNav from './Functions/LeftNavigationMenu.tsx';
+import TableContents from './Functions/TableContents.tsx';
 import LeftImageAndDescription from "./Functions/LeftImageAndDescription.tsx";
 
 const theme = createTheme({
@@ -50,7 +50,7 @@ class App extends Component {
   render(){
     return(
       <body background="abe-background.jpg">
-        <ThemeProvider them={theme}>
+        <ThemeProvider theme={theme}>
           <CssBaseline />
           <div>
             <h1 className="homePageTitle">{name_of_home_page}のホームページ</h1><h2 className='homePageSubTitle'>Abeshell-kai<br></br>～ABE Hiroshiと学ぶサイバーセキュリティ～</h2>

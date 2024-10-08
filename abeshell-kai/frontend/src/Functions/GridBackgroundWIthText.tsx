@@ -5,7 +5,7 @@ type GridBackGroundWithTextProps = {
     columns: number; // 1行当たり 4
 }
 
-const GridBackGroundWithText: React.FC<GridBackGroundWithTextProps> = ({ texts, columns }) => {
+const GridBackgroundWithText: React.FC<GridBackGroundWithTextProps> = ({ texts, columns }) => {
     const gridStyle = {
         display: 'grid',
         gridTemplateColumns: `repeat(${columns}, 1fr)`,
@@ -38,4 +38,4 @@ const GridBackGroundWithText: React.FC<GridBackGroundWithTextProps> = ({ texts, 
     );
 };
 
-export default GridBackGroundWithText;
+export default GridBackgroundWithText;

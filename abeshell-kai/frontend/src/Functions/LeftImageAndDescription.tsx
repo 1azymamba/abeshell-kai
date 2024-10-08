@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { MyDropzoneBasic } from "../FileUpload";
+import { MyDropzoneBasic } from "../FileUpload.tsx";
 import React from "react";
 
 const LeftImageAndDescription = () => {
@@ -11,19 +11,21 @@ const LeftImageAndDescription = () => {
 
     const isImage = /\.(jpg|png)$/.test(imageName); // .test() を使う
 
+    const imageUrl = `http://localhost:3001/uploads/${imageName}`;
+
     return (
         <td rowSpan={2}>
             {isImage ? (
-                <img src={imageName} height="100%" alt="your pic" width="100%" />
+                <img src={imageUrl} height="100%" alt="your pic" width="100%" />
             ) : (
                 <div>
-                    <iframe width="100%" height="100%" src={imageName}></iframe>
+                    <iframe width="100%" height="100%" src={imageUrl}></iframe>
                     <br />
                     <br />
                 </div>
             )}
             <p>
-                {imageName}
+                {imageUrl}
                 <MyDropzoneBasic onFileUpload={handleFileUpload} />
             </p>
             <table width="256">
