@@ -1,5 +1,4 @@
-import React, { Dispatch, SetStateAction } from 'react';
-
+import React, { Dispatch, SetStateAction } from "react";
 interface UserInputProps {
     user_name: string;
     setUserName: Dispatch<SetStateAction<string>>;

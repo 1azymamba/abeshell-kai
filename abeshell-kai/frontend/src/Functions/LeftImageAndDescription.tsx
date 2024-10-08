@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { MyDropzoneBasic } from "../FileUpload";
+import React from "react";
 
 const LeftImageAndDescription = () => {
     const [imageName, setImageName] = useState("abe-top.jpg"); // Default image name
