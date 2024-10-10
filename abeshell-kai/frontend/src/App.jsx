@@ -6,7 +6,7 @@ import './App.css';
 import React, { Component, useState } from 'react';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { CssBaseline } from '@mui/material';
-import GridBackgroundWithText from './Functions/GridBackgroundWithText.tsx';
+// import GridBackgroundWithText from './Functions/GridBackgroundWithText.tsx';
 import SideNav from './Functions/LeftNavigationMenu.tsx';
 import TableContents from './Functions/TableContents.tsx';
 import LeftImageAndDescription from "./Functions/LeftImageAndDescription.tsx";
