@@ -1,21 +1,22 @@
 # ubuntuベースイメージ
 FROM ubuntu:22.04
 
+# 環境変数を設定して対話プロンプトを無効化
+ENV DEBIAN_FRONTEND=noninteractive
+
 # 作業ディレクトリを設定する
-WORKDIR /Abeshell-kai
-#COPY . /Abeshell-kai
+#WORKDIR /Abeshell-kai
+COPY . /Abeshell-kai
 
 # 必要なツール一式をインストールする
-#RUN apt install update -y && apt install nodejs npm
+RUN apt update -y && apt install nodejs npm php -y
 
-# npmの依存関係をインストール&実行
-#WORKDIR /Abeshell-kai/frontend
-#RUN npm install
-#RUN npm start
-#WORKDIR /Abeshell-kai/backend
-#RUN php -S localhost:3001
+# npmの依存関係をインストール
+WORKDIR /Abeshell-kai/abeshell-kai/frontend
+RUN npm install
 
-
+# 実行
+CMD ["sh", "-c", "npm start --prefix /Abeshell-kai/abeshell-kai/frontend && php -S 0.0.0.0:3001 -t /Abeshell-kai/abeshell-kai/backend"]
 
 # ユーザを作成
 #RUN groupadd -r 
