@@ -14,10 +14,9 @@ RUN apt update -y && apt install nodejs npm php -y
 # npmの依存関係をインストール
 WORKDIR /Abeshell-kai/abeshell-kai/frontend
 RUN npm install
-WORKDIR /Abeshell-kai/abeshell-kai/backend
 
 # 実行
-CMD ["sh", "-c", "npm start --prefix /Abeshell-kai/abeshell-kai/frontend & php -S 0.0.0.0:3001 -t /Abeshell-kai/abeshell-kai/backend"]
+CMD ["sh", "-c", "npm start --prefix /Abeshell-kai/abeshell-kai/frontend && php -S 0.0.0.0:3001 -t /Abeshell-kai/abeshell-kai/backend"]
 
 # ユーザを作成
 #RUN groupadd -r 
