@@ -20,7 +20,6 @@ php -S localhost:3001
 ## Deploy on docker container
 ```
 cd ~/abeshell-kai
-make build
-make run
+make build && make run
 // access to localhost:3000 !
 ```
